@@ -140,7 +140,7 @@ checkoutBtn.addEventListener("click", function(){
     const isOpen = checkRestaurantOpen();
     if(!isOpen){
         Toastify({
-            text: "Restaurante fechado! Consulte o horário de funcionamento.",
+            text: "Loja fechada! Consulte o horário de funcionamento.",
             duration: 3000,
             close: true,
             gravity: "top", // `top` or `bottom`
@@ -168,7 +168,7 @@ checkoutBtn.addEventListener("click", function(){
     }).join("")
 
     const message = encodeURIComponent(cartItems)
-    const phone = "67991851966"
+    const phone = "67981244097"
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
 
@@ -181,7 +181,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 24; // boolean true/false
+    return hora >= 10 && hora < 24; // boolean true/false
 
     
 }
